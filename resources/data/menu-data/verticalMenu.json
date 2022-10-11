@@ -5,6 +5,12 @@
       "name": "Dashboard",
       "icon": "home",
       "slug": "dashboard.index"
+    },
+    {
+      "url": "index",
+      "name": "Feedback",
+      "icon": "home",
+      "slug": "index"
     }
   ]
 }
