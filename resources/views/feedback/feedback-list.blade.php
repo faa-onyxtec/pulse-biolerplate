@@ -1,6 +1,6 @@
 @extends('layouts/contentLayoutMaster')
 
-@section('title', 'Feedback List')
+@section('title', 'My Given Feedbacks')
 
 @section('vendor-style')
     {{-- Page Css files --}}
@@ -21,12 +21,13 @@
         <!-- list section start -->
         <div class="card">
             <div class="card-datatable table-responsive pt-0">
-                <table class="messages-list-table">
+                <table class="feedback-list-table">
                     <thead class="thead-light">
                         <tr>
                             <th>No</th>
                             <th>About User</th>
                             <th>To User</th>
+                            <th>Anonymous</th>
                             <th>Feedbacks</th>
                         </tr>
                     </thead>
@@ -54,6 +55,6 @@
 
 @section('page-script')
     {{-- Page js files --}}
-    <script src="{{ asset(mix('js/scripts/pages/app-messages-list.js'))  }}"></script>
+    <script src="{{ asset(mix('js/scripts/pages/app-feedback-list.js'))  }}"></script>
    
 @endsection

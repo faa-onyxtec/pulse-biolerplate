@@ -509,6 +509,6 @@
 @endsection
 @section('page-script')
   <!-- Page js files -->
-  <script src="{{ asset(mix('js/scripts/pages/dashboard-analytics.js')) }}"></script>
-  <script src="{{ asset(mix('js/scripts/pages/app-invoice-list.js')) }}"></script>
+  {{-- <script src="{{ asset(mix('js/scripts/pages/dashboard-analytics.js')) }}"></script>
+  <script src="{{ asset(mix('js/scripts/pages/app-invoice-list.js')) }}"></script> --}}
 @endsection

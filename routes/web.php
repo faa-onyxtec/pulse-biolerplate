@@ -27,4 +27,6 @@ Auth::routes();
     Route::put('/profile/password', [ProfileController::class, 'updatePasswordProfile'])->name('password.profile.update');
 
     Route::get('index', [FeedbackController::class, 'index'])->name('index');
+    Route::get('feedback/list', [FeedbackController::class, 'feedbackList'])->name('feedback.list');
+    Route::get('/home', [FeedbackController::class, 'create'])->name('home');
 // });

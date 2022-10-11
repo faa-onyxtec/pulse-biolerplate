@@ -10,7 +10,24 @@
       "url": "index",
       "name": "Feedback",
       "icon": "home",
-      "slug": "index"
+      "slug": "index",
+      "submenu": [
+        {
+          "url": "index",
+          "name": "Feedback",
+          "slug": "index"
+        },
+        {
+          "url": "feedback/list",
+          "name": "My Given Feedbacks",
+          "slug": "feedback.list"
+        },
+        {
+          "url": "active-projects",
+          "name": "Send Feedback",
+          "slug": "active-projects"
+        }
+      ]
     }
   ]
 }
