@@ -13,10 +13,10 @@ use Illuminate\Support\Facades\Auth;
 class FeedbackController extends Controller
 {
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
     /**
      * Display a listing of the resource.
      *
@@ -24,11 +24,13 @@ class FeedbackController extends Controller
      */
     public function index()
     {
-        $page = config('pulse.pagination');
-        $feedbacks = Feedback::where('about_user_id', Auth::id())->with(['users' => function ($q) {
-            $q->where('user_id', Auth::id());
-        }])->get();
-        return view('feedback.messages', compact('feedbacks'));
+        if (request()->ajax()) {
+            $feedbacks = Feedback::where('about_user_id', Auth::id())->with(['users' => function ($q) {
+                $q->where('user_id', Auth::id());
+            }])->get();
+            return ['data' => $feedbacks];
+        }
+        return view('feedback.messages');
     }
 
 
@@ -98,9 +100,12 @@ class FeedbackController extends Controller
      */
     public function feedbackList()
     {
+        if (request()->ajax()) {
         $feedbacks = Feedback::where('from_user_id', auth()->user()->id)->with(['users', 'about_user'])->get();
+        return ['data' => $feedbacks];
+    }
 
-        return view('feedback.messages', compact('feedbacks'));
+        return view('feedback.feedback-list');
     }
 
     /**

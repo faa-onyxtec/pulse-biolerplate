@@ -177,5 +177,9 @@ return [
   "Tree" => "Tree",
   "Ratings" => "Ratings",
   "Locale" => "Locale",
-  "message" => "Cake sesame snaps cupcake gingerbread danish I love gingerbread. Apple pie pie jujubes chupa chups muffin halvah lollipop. Chocolate cake oat cake tiramisu marzipan sugar plum. Donut sweet pie oat cake dragée fruitcake cotton candy lemon drops."
+  "message" => "Cake sesame snaps cupcake gingerbread danish I love gingerbread. Apple pie pie jujubes chupa chups muffin halvah lollipop. Chocolate cake oat cake tiramisu marzipan sugar plum. Donut sweet pie oat cake dragée fruitcake cotton candy lemon drops.",
+  "Feedback"=>"Feedback",
+  "My Given Feedbacks" => "My Given Feedbacks",
+  "Send Feedback" => "Send Feedback"
+
 ];
